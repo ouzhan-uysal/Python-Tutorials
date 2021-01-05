@@ -1,0 +1,44 @@
+django-admin --help     => Verilebilecek komutları gösterir. (Python manage.py help => komutu ilede bu komutları görebilirsin.)
+
+django-admin startproject project_name   => project_name adında yeni bir django projesi yaratır.
+
+python manage.py runserver  => Projeyi bir portta çalıştırır.
+
+python manage.py startapp app_name   => Yeni bir uygulamala oluşturur.
+
+HTML sayfalarındaki block content'leri düzgünce görebilmek için VS Code'da Jinja eklentisini yükle.
+
+Yaratılan Proje İçerisindeki:
+    manage.py   => Uygulamayı konsoldan çalıştırırken gerekli olan kodların bulunduğu yer. (Buraya dokunmayacağız olduğu gibi kalacak.)
+
+    __init__.py => Başlangıçta boş gelir.
+
+    asgi.py     => 
+
+    settings.py => Belli ayar ve değişkenler sunuyor.
+        Örn:    BASE_DIR adlı değişken: root klasörünün nerede olduğunu/konumunu verir.
+                SECRET_KEY  : Uygulamanın güvenliği için gerekli
+                DEBUG       : Değeri True ise uygulamanın geliştirme aşamasında olduğunu söyler.
+                INSTALLED_APPS: Uygulama içerisinde kurulmuş olan paketler/uygulamalar bulunuyor. Örn: django.contrib.aut => Kullanıcı girişi için gerekli olacak paket.
+                ROOT_URLCONF: Uygulamanın dosya yolu
+                TEMPLATES   : Template için kullanacağımız ayarların bulunduğu değişken.
+                DATABASES   : Veritabanı ayarlarının yapıldığı kısım. Default olarak SQLite ayarlı gelir. MySQL, MongoDB kullanılacak ise ona göre içerisinin düzeltilmesi gerek.
+                TIME_ZONE   : Kullanılan zaman dilimi
+                STATIC_URL  : Uygulamadaki resim , css, js dosyalarımızın konumuyla alakalı bilgiler.
+
+    urls.py     => 
+
+    wsgi.py     => Server yapılandırması için kullanılacak olan dosya.
+
+    views.py    => Görüntü oluşturmak için burada metod oluştulur. Örn: index.html
+
+    models.py   => Örn: Veritabanında makale isminde bir tablomuz var ise projedeki makale sınıfına karşılık gelecek. Class makale gibi. bunlar models kısmında oluşturulacak. 
+
+    apps.py     => Uygulamayı temsil eden dosya. Oluşturulan bu uygulamayı settings.py içerisinde INSTALLED_APPS kısmına eklenmesi gerek.
+
+
+layout.html => Bu klasörde her .html sayfasında bulunacak iskelet yapı olacak. Diğer .html sayfalarında sadece kendi içerisinde bulunması gereken şeyler bulunacak diğer kısımları buradaki layout.html kısmından alacak.
+
+--- MySQL Database ---
+    1. pip install mysqlclient      => Bağlantıyı sağlamak için gerekli olan modül
+    2. 
