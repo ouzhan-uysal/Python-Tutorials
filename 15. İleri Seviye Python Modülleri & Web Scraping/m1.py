@@ -40,6 +40,7 @@ print("simdi: ", simdi)
 
 print("-----------------------------------------------")
 
+
 r = datetime.strftime(simdi, '%Y')      #datetime.today() fonksiyonundaki sadece yili alir.
 r2 = datetime.strftime(simdi, '%X')     # sadece saat bilgisi
 r3 = datetime.strftime(simdi, '%Y %B %A')
