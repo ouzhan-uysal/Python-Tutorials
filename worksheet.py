@@ -1,2 +1,2 @@
-print("deneme")
+print((8/2*4)+4-10*2)
 
